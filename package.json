@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce-rag",
+  "version": "1.0.0",
+  "description": "Ecommerce AI Agent ",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MugheesMehdi07/ecommerce-rag.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MugheesMehdi07/ecommerce-rag/issues"
+  },
+  "homepage": "https://github.com/MugheesMehdi07/ecommerce-rag#readme"
+}
