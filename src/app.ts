@@ -1,20 +1,21 @@
 import express from 'express';
+// import cors from 'cors';
 import swaggerUi from 'swagger-ui-express';
 import { swaggerDocs } from './config/swagger';
-import { QueryDocument } from './controllers/queryController';
-import { IngestDocument } from './controllers/ingestionController';
-
+import ingestionRoutes from './routes/ingestionRoutes';
+import queryRoutes from './routes/queryRoutes';
 
 const app = express();
-app.use(express.json());
 
+// Middleware
+app.use(express.json());
+// app.use(cors());
+
+// Swagger documentation
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-app.get('/api/ingestion', IngestDocument);
-app.get('/api/query', QueryDocument);
-
+// Routes
+app.use('/api/ingestion', ingestionRoutes);
+app.use('/api/query', queryRoutes);
 
 export default app;
-
-//cors
-//middlewares
